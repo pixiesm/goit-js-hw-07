@@ -25,7 +25,7 @@ function onCreateButtonClick() {
 function createBoxes(amount) {
   divBoxElem.innerHTML = '';
   const arrBoxElem = [];
-  for (let i = 1; i < amount; i++) {
+  for (let i = 0; i < amount; i++) {
     const newBoxElem = document.createElement(`div`);
     newBoxElem.style.width = `${30 + i * 10}px`;
     newBoxElem.style.height = `${30 + i * 10}px`;
@@ -37,5 +37,3 @@ function createBoxes(amount) {
 
 function destroyBoxes() { divBoxElem.innerHTML = '' };
 dstryBTN.addEventListener('click', destroyBoxes);
-
-

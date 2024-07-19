@@ -26,8 +26,8 @@ const images = [
 ];
 
 const galleryEl = document.querySelector(`.gallery`)
-const liElem = document.createElement(`li`);
-liElem.classList.add("js-image")
 const markup = images.map(image => `<li><img class="js-image" src=${image.url} alt=${image.alt}></img></li>`)
   .join('');
 galleryEl.insertAdjacentHTML(`afterbegin`, markup);
+
+

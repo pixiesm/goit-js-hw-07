@@ -16,7 +16,7 @@ crtBtn.addEventListener(`click`, onCreateButtonClick )
 
 function onCreateButtonClick() {
   const amount = Number(inputElem.value);
-  if (amount => 1 && amount <= 100) {
+  if (amount >= 1 && amount <= 100) {
     createBoxes(amount);
     inputElem.value = '';
     
@@ -33,6 +33,7 @@ function createBoxes(amount) {
     arrBoxElem.push(newBoxElem);
   }
   divBoxElem.append(...arrBoxElem);
+  divBoxElem.classList.add('color-box');
 }
 
 function destroyBoxes() { divBoxElem.innerHTML = '' };
